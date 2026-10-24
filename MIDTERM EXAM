@@ -1,0 +1,29 @@
+1. What is the primary operational difference between git fetch and git pull?
+git fetch = downloads only, no merge. git pull = fetch + merge.
+
+2. You have uncommitted changes and need to temporarily switch branch. Which workflow prevents Git from blocking checkout?
+git stash -> checkout -> stash pop.
+
+3. When executing git merge --no-ff, what specific behavior is enforced?
+Forces a new merge commit even if fast-forward is possible, to preserve branch history.
+
+4. What happens when you check out a specific commit hash directly?
+Enters DETACHED HEAD state, HEAD points to commit not a branch.
+
+5. You need to apply a specific bug-fix commit without merging entire branch history. Which command?
+git cherry-pick <hash>
+
+6. After destructive git reset --hard, you lost commits not on any branch. Which utility retrieves them?
+git reflog
+
+7. You want to remove untracked files and directories including ignored files in .gitignore. Which command flag?
+git clean -fdx
+
+8. You need to undo a public pushed commit without altering history. Which command?
+git revert <hash>
+
+9. You want to identify the specific commit that introduced a regression bug. Which utility automates binary search?
+git bisect
+
+10. What is the function of the --amend flag with git commit?
+Modifies/replaces the last commit - to fix message or add forgotten files.
